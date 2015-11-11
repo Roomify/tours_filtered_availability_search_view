@@ -1,0 +1,21 @@
+<?php
+/**
+ * @file
+ * Code for the Tours filtered availability search view feature.
+ */
+
+include_once 'tours_filtered_availability_search_view.features.inc';
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function tours_filtered_availability_search_view_views_pre_view($view, $display_id, $args) {
+  if ($view->name == 'filtered_availability_search') {
+    // Include the CTools tools that we need.
+    ctools_include('ajax');
+    ctools_include('modal');
+
+    // Add CTools' javascript to the page.
+    ctools_modal_add_js();
+  }
+}
