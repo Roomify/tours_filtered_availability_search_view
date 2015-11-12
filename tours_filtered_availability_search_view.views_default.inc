@@ -14,7 +14,7 @@ function tours_filtered_availability_search_view_views_default_views() {
   $view->name = 'filtered_availability_search';
   $view->description = 'Overrides Drupal Rooms\' default booking page with a filtered availability search';
   $view->tag = 'default';
-  $view->base_table = 'search_api_index_default_unit_index';
+  $view->base_table = 'search_api_index_tours';
   $view->human_name = 'Filtered Availability Search';
   $view->core = 7;
   $view->api_version = '3.0';
@@ -34,7 +34,7 @@ function tours_filtered_availability_search_view_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Indexed Bookable Units: Bookable units ID */
   $handler->display->display_options['fields']['unit_id']['id'] = 'unit_id';
-  $handler->display->display_options['fields']['unit_id']['table'] = 'search_api_index_default_unit_index';
+  $handler->display->display_options['fields']['unit_id']['table'] = 'search_api_index_tours';
   $handler->display->display_options['fields']['unit_id']['field'] = 'unit_id';
   $handler->display->display_options['fields']['unit_id']['label'] = '';
   $handler->display->display_options['fields']['unit_id']['exclude'] = TRUE;
@@ -43,14 +43,14 @@ function tours_filtered_availability_search_view_views_default_views() {
   $handler->display->display_options['fields']['unit_id']['link_to_entity'] = 0;
   /* Field: Indexed Bookable Units: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'search_api_index_default_unit_index';
+  $handler->display->display_options['fields']['name']['table'] = 'search_api_index_tours';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_entity'] = 1;
   /* Filter criterion: Indexed Bookable Units: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_default_unit_index';
+  $handler->display->display_options['filters']['type']['table'] = 'search_api_index_tours';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'single_day_tour' => 'single_day_tour',
@@ -59,7 +59,7 @@ function tours_filtered_availability_search_view_views_default_views() {
   );
   /* Filter criterion: Indexed Bookable Units: Bookable */
   $handler->display->display_options['filters']['bookable']['id'] = 'bookable';
-  $handler->display->display_options['filters']['bookable']['table'] = 'search_api_index_default_unit_index';
+  $handler->display->display_options['filters']['bookable']['table'] = 'search_api_index_tours';
   $handler->display->display_options['filters']['bookable']['field'] = 'bookable';
   $handler->display->display_options['filters']['bookable']['value'] = '1';
 
